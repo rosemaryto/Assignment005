@@ -1,28 +1,31 @@
-//GLOBAL VARIABLES
-let id
-let Fname
-let ext
-let email
-let department
-let submit
+const $ = (id) => document.getElementById(id);
 
-//HELPER FUNCTION 
-const $ = (id) => document.getElementById(id)
+let id = $("id");
 
-//GET ELEMENTS FROM THE DOM
-id = $('id')
-Fname = $('name')
-ext = $('ext')
-email = $('email')
-department = $('department')
-submit = $('submit')
+let name = $("name");
 
-//GET TEXTBOX VALUES
-submit.addEventListener('click', (e) => {
-    e.preventDefault()
-    console.log(`ID: ${id.value}`)
-    console.log(`Name: ${Fname.value}`)
-    console.log(`Extension: ${ext.value}`)
-    console.log(`Email: ${email.value}`)
-    console.log(`Department: ${department.value}`)
+let ext = $("ext");
+
+let email = $("email");
+
+let department = $("department");
+
+let empForm = $("empForm");
+
+ 
+
+empForm.addEventListener('submit', (e) => {
+
+  e.preventDefault();
+
+  console.log(`ID: ${id.value}`);
+
+  console.log(`Name: ${name.value}`);
+
+  console.log(`Extension: ${ext.value}`);
+
+  console.log(`Email: ${email.value}`);
+
+  console.log(`Department: ${department.value}`);
+
 })
